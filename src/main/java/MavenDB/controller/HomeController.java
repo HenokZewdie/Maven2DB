@@ -1,7 +1,9 @@
 package MavenDB.controller;
 
 import java.io.IOException;
+import java.util.List;
 
+import javax.persistence.Query;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
@@ -35,6 +37,24 @@ public class HomeController {
     public String submit(@Valid @ModelAttribute("modelatt") Contacts contacts, Model model) {
         Handler handler= new Handler();
         handler.insertIntoDB(contacts);
-        return "home";
+        return "redirect:/showall";
+    }
+    @RequestMapping(value = "/showall", method = RequestMethod.GET)
+    public String retrievDB(Model model){
+        Contacts contacts = new Contacts();
+        SessionFactory sessionFac = new Configuration().configure().buildSessionFactory();
+        Session session = sessionFac.openSession();
+        session.beginTransaction();
+
+        String hql = "SELECT E.fname FROM Contacts E";
+        Query query = session.createQuery(hql);
+        List results = query.getResultList();
+
+        contacts = (Contacts) session.get(Contacts.class, 5); // For non-Collection
+        model.addAttribute("Username", contacts.getFname());
+        model.addAttribute("Password", contacts.getLname());
+        model.addAttribute("listofCon", results);
+        System.out.println(contacts.getFname() + "  " + contacts.getLname());
+        return "display";
     }
 }

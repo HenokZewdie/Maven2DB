@@ -9,5 +9,6 @@
 <body>
 <h5 style="font-family: 'Sansation'; font-size: 60px; color: black">Hello World</h5>
 <a href="/signup">Sign up</a>
+<a href="/showall">Show</a>
 </body>
 </html>
