@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hibernate.cfg.xml/Hibernate">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="mavendb">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="accounts"/>
+    <schema id="4" parent="1" name="atm"/>
+    <schema id="5" parent="1" name="bank"/>
+    <schema id="6" parent="1" name="bcfinder"/>
+    <schema id="7" parent="1" name="customer"/>
+    <schema id="8" parent="1" name="debalfelagi"/>
+    <schema id="9" parent="1" name="henok"/>
+    <schema id="10" parent="1" name="henok7week"/>
+    <schema id="11" parent="1" name="information_schema"/>
+    <schema id="12" parent="1" name="login"/>
+    <schema id="13" parent="1" name="miniamazon"/>
+    <schema id="14" parent="1" name="minireddit"/>
+    <schema id="15" parent="1" name="mysql"/>
+    <schema id="16" parent="1" name="myusers"/>
+    <schema id="17" parent="1" name="newlogin"/>
+    <schema id="18" parent="1" name="newtest"/>
+    <schema id="19" parent="1" name="performance_schema"/>
+    <schema id="20" parent="1" name="rediateresume"/>
+    <schema id="21" parent="1" name="renthouse"/>
+    <schema id="22" parent="1" name="resumeservlet"/>
+    <schema id="23" parent="1" name="secbones"/>
+    <schema id="24" parent="1" name="securex"/>
+    <schema id="25" parent="1" name="spring"/>
+    <schema id="26" parent="1" name="springfriday"/>
+    <schema id="27" parent="1" name="sql9185734"/>
+    <schema id="28" parent="1" name="sys"/>
+    <schema id="29" parent="1" name="test"/>
+    <schema id="30" parent="1" name="testcrud"/>
+    <table id="31" parent="2" name="contacts"/>
+    <column id="32" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="33" parent="31" name="fname">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="34" parent="31" name="lname">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="35" parent="31" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

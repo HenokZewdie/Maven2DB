@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="commavendb:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="com.mavendb.war">
+      <element id="artifact" artifact-name="commavendb:war exploded" />
+    </root>
+  </artifact>
+</component>
